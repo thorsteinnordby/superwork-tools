@@ -344,7 +344,7 @@ export default function RoiCalculatorPage() {
                   <strong>Productivity Savings Details:</strong>
                 </div>
                 <div>• {formatNumber(results.totalHoursSavedAnnually)} hours saved annually across {inputs.numberOfSalesReps} reps</div>
-                <div>• 5 hours saved per rep per week from automation</div>
+                <div>• 3 hours saved per rep per week from automation</div>
                 <div>• Hourly rate: {formatCurrency(results.hourlyRate)}</div>
               </div>
             </div>
@@ -354,13 +354,13 @@ export default function RoiCalculatorPage() {
               <h2 className="mb-4 font-heading text-xl font-bold text-sw-neutral-500">Revenue Lift Projection</h2>
               <div className="space-y-3">
                 <div className="flex justify-between border-b border-sw-midnight-100 pb-2">
-                  <span className="text-sm text-sw-neutral-400">Lead Volume Growth (+205%)</span>
+                  <span className="text-sm text-sw-neutral-400">Lead Volume Growth (+25%)</span>
                   <span className="font-semibold text-sw-neutral-500">
                     {formatNumber(inputs.monthlyMarketingLeads)} → {formatNumber(results.newMonthlyLeads)} / month
                   </span>
                 </div>
                 <div className="flex justify-between border-b border-sw-midnight-100 pb-2">
-                  <span className="text-sm text-sw-neutral-400">Close Rate Improvement (+30%)</span>
+                  <span className="text-sm text-sw-neutral-400">Close Rate Improvement (+15%)</span>
                   <span className="font-semibold text-sw-neutral-500">
                     {formatPercentage(inputs.currentDealCloseRate, 1)} → {formatPercentage(results.newDealCloseRate, 1)}
                   </span>
@@ -453,12 +453,12 @@ export default function RoiCalculatorPage() {
             <div className="space-y-6">
               <div>
                 <h3 className="mb-2 font-semibold text-sw-neutral-500">Industry Benchmarks</h3>
-                <p className="mb-2 text-sm text-sw-neutral-400">Based on HubSpot customer data (2023-2025):</p>
+                <p className="mb-2 text-sm text-sw-neutral-400">Conservative estimates based on HubSpot customer data:</p>
                 <ul className="list-inside list-disc space-y-1 text-sm text-sw-neutral-400">
-                  <li><strong>Lead Increase:</strong> +205% more marketing leads</li>
-                  <li><strong>Close Rate Improvement:</strong> +30% improvement in deal close rate</li>
+                  <li><strong>Lead Increase:</strong> +25% more marketing leads (through better SEO, email, and landing pages)</li>
+                  <li><strong>Close Rate Improvement:</strong> +15% improvement in deal close rate (through better lead scoring and nurturing)</li>
                   <li><strong>Deals Closed:</strong> +50% more deals closed (combined effect of more leads + better conversion)</li>
-                  <li><strong>Productivity Gains:</strong> 5 hours saved per sales rep per week</li>
+                  <li><strong>Productivity Gains:</strong> 3 hours saved per sales rep per week (through automation and workflow efficiency)</li>
                 </ul>
               </div>
 
