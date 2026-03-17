@@ -87,6 +87,56 @@ function CopyButton({
   );
 }
 
+/* ─── Input Field Component ─── */
+function InputField({
+  label,
+  param,
+  required,
+  value,
+  onChange,
+  placeholder,
+  presets,
+}: {
+  label: string;
+  param?: string;
+  required?: boolean;
+  value: string;
+  onChange: (v: string) => void;
+  placeholder: string;
+  presets?: string[];
+}) {
+  return (
+    <div className="mb-6">
+      <label className="mb-1.5 flex items-center gap-2 text-label text-sw-neutral-500">
+        {param && (
+          <span className="rounded bg-sw-violet-500/8 px-2 py-0.5 font-mono text-meta text-sw-violet-500">
+            {param}
+          </span>
+        )}
+        {label}
+        {required !== undefined && (
+          <span
+            className={`text-meta font-normal ${
+              required ? "text-sw-violet-500" : "text-sw-neutral-400"
+            }`}
+          >
+            {required ? "required" : "optional"}
+          </span>
+        )}
+      </label>
+      <p className="mb-2 text-meta text-sw-neutral-400">{placeholder}</p>
+      <input
+        type={param ? "text" : "url"}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        className="w-full rounded-lg border border-sw-midnight-200 bg-white px-3.5 py-2.5 text-sm text-sw-neutral-500 transition-all placeholder:text-sw-neutral-400 focus:border-sw-violet-500 focus:shadow-[0_0_0_3px_rgba(106,109,205,0.12)] focus:outline-none"
+      />
+      {presets && <PresetChips presets={presets} value={value} onChange={onChange} />}
+    </div>
+  );
+}
+
 /* ─── Main Page ─── */
 export default function UtmBuilderPage() {
   const [baseUrl, setBaseUrl] = useState("https://yoursite.com/demo");
@@ -184,56 +234,6 @@ export default function UtmBuilderPage() {
     setTerm("");
     setContent("");
   };
-
-  /* ─── Input field helper ─── */
-  const InputField = ({
-    label,
-    param,
-    required,
-    value,
-    onChange,
-    placeholder,
-    presets,
-    isTextArea,
-  }: {
-    label: string;
-    param?: string;
-    required?: boolean;
-    value: string;
-    onChange: (v: string) => void;
-    placeholder: string;
-    presets?: string[];
-    isTextArea?: boolean;
-  }) => (
-    <div className="mb-6">
-      <label className="mb-1.5 flex items-center gap-2 text-label text-sw-neutral-500">
-        {param && (
-          <span className="rounded bg-sw-violet-500/8 px-2 py-0.5 font-mono text-meta text-sw-violet-500">
-            {param}
-          </span>
-        )}
-        {label}
-        {required !== undefined && (
-          <span
-            className={`text-meta font-normal ${
-              required ? "text-sw-violet-500" : "text-sw-neutral-400"
-            }`}
-          >
-            {required ? "required" : "optional"}
-          </span>
-        )}
-      </label>
-      <p className="mb-2 text-meta text-sw-neutral-400">{placeholder}</p>
-      <input
-        type={param ? "text" : "url"}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-        className="w-full rounded-lg border border-sw-midnight-200 bg-white px-3.5 py-2.5 text-sm text-sw-neutral-500 transition-all placeholder:text-sw-neutral-400 focus:border-sw-violet-500 focus:shadow-[0_0_0_3px_rgba(106,109,205,0.12)] focus:outline-none"
-      />
-      {presets && <PresetChips presets={presets} value={value} onChange={onChange} />}
-    </div>
-  );
 
   return (
     <div className="p-6">

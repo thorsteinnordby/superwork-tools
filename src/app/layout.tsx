@@ -23,6 +23,11 @@ export const metadata: Metadata = {
   title: "Superwork Tools — Free HubSpot & RevOps Utilities",
   description:
     "Free interactive tools for HubSpot users and RevOps teams. UTM builder, ROI calculators, and more from Superwork.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
