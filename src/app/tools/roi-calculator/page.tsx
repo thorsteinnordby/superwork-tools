@@ -6,6 +6,32 @@ import { RoiInputs, DEFAULT_INPUTS } from "@/types/roi";
 import { calculateROI, formatCurrency, formatPercentage, formatNumber } from "@/lib/roiCalculator";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
+/* ─── Tooltip Component ─── */
+function InfoTooltip({ text }: { text: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="relative inline-block">
+      <button
+        type="button"
+        className="inline-flex items-center justify-center rounded-full text-sw-violet-500 transition-colors hover:bg-sw-violet-500/10"
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
+          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM8.94 6.94a.75.75 0 11-1.061-1.061 3 3 0 112.871 5.026v.345a.75.75 0 01-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 108.94 6.94zM10 15a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+        </svg>
+      </button>
+      {isOpen && (
+        <div className="absolute left-0 top-6 z-50 w-72 rounded-lg border border-sw-midnight-200 bg-white p-3 text-xs leading-relaxed text-sw-neutral-500 shadow-lg">
+          {text}
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ─── Input Field Component ─── */
 function CurrencyInput({
   label,
@@ -24,14 +50,10 @@ function CurrencyInput({
 
   return (
     <div className="mb-4">
-      <label htmlFor={inputId} className="mb-1.5 flex items-center gap-2 text-sm font-semibold text-sw-neutral-500">
+      <label htmlFor={inputId} className="mb-1.5 flex items-center gap-1.5 text-sm font-semibold text-sw-neutral-500">
         {label}
         {required && <span className="text-red-500">*</span>}
-        {tooltip && (
-          <span className="text-xs font-normal text-sw-neutral-400" title={tooltip}>
-            ⓘ
-          </span>
-        )}
+        {tooltip && <InfoTooltip text={tooltip} />}
       </label>
       <div className="relative">
         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sw-neutral-400">$</span>
@@ -68,14 +90,10 @@ function NumberInput({
 
   return (
     <div className="mb-4">
-      <label htmlFor={inputId} className="mb-1.5 flex items-center gap-2 text-sm font-semibold text-sw-neutral-500">
+      <label htmlFor={inputId} className="mb-1.5 flex items-center gap-1.5 text-sm font-semibold text-sw-neutral-500">
         {label}
         {required && <span className="text-red-500">*</span>}
-        {tooltip && (
-          <span className="text-xs font-normal text-sw-neutral-400" title={tooltip}>
-            ⓘ
-          </span>
-        )}
+        {tooltip && <InfoTooltip text={tooltip} />}
       </label>
       <input
         id={inputId}
@@ -109,14 +127,10 @@ function PercentageInput({
 
   return (
     <div className="mb-4">
-      <label htmlFor={inputId} className="mb-1.5 flex items-center gap-2 text-sm font-semibold text-sw-neutral-500">
+      <label htmlFor={inputId} className="mb-1.5 flex items-center gap-1.5 text-sm font-semibold text-sw-neutral-500">
         {label}
         {required && <span className="text-red-500">*</span>}
-        {tooltip && (
-          <span className="text-xs font-normal text-sw-neutral-400" title={tooltip}>
-            ⓘ
-          </span>
-        )}
+        {tooltip && <InfoTooltip text={tooltip} />}
       </label>
       <div className="relative">
         <input
