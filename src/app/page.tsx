@@ -70,16 +70,9 @@ export default function HomePage() {
               {tool.icon}
             </div>
             <div className="min-w-0 flex-1">
-              <div className="mb-1 flex items-center gap-2">
-                <h2 className="font-heading text-body-base font-bold text-sw-neutral-500">
-                  {tool.name}
-                </h2>
-                {tool.badge && (
-                  <span className="rounded-full bg-sw-midnight-100 px-2 py-0.5 text-meta text-sw-neutral-400">
-                    {tool.badge}
-                  </span>
-                )}
-              </div>
+              <h2 className="mb-1 font-heading text-body-base font-bold text-sw-neutral-500">
+                {tool.name}
+              </h2>
               <p className="text-body-compact text-sw-neutral-400">{tool.description}</p>
             </div>
             {tool.href !== "#" && (
