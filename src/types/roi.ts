@@ -66,7 +66,7 @@ export const ROI_BENCHMARKS = {
 
 // Default values to help users get started
 export const DEFAULT_INPUTS: RoiInputs = {
-  monthlyMarketingLeads: 500,
+  monthlyMarketingLeads: 50,
   averageDealSize: 15000,
   currentDealCloseRate: 15,
   averageSalesCycleLength: 60,
