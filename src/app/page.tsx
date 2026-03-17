@@ -5,7 +5,7 @@ const tools = [
     name: "UTM Tag Builder",
     description:
       "Generate campaign-tracked URLs with HubSpot-friendly presets. Copy and go.",
-    href: "/tools/utm-builder",
+    href: "/tools/utm-tag-builder",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.43a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L5.25 9.94" />
