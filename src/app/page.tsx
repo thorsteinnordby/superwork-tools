@@ -13,7 +13,7 @@ const tools = [
     ),
   },
   {
-    name: "ROI Calculator",
+    name: "HubSpot ROI Calculator",
     description:
       "Estimate savings and revenue lift from switching to HubSpot.",
     href: "/tools/roi-calculator",
