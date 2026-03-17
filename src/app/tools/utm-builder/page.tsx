@@ -243,9 +243,9 @@ export default function UtmBuilderPage() {
 
   return (
     <div className="p-6">
-      <div className="mx-auto flex max-w-[1120px] items-start gap-6 max-md:flex-col">
+      <div className="mx-auto flex max-w-[1600px] items-start gap-8 max-md:flex-col">
         {/* ── Left: Tool ── */}
-        <div className="min-w-0 flex-1 max-w-[720px]">
+        <div className="min-w-0 flex-1">
           {/* Header */}
           <div className="rounded-t-lg bg-gradient-to-br from-sw-midnight-500 to-sw-midnight-600 px-8 py-9 text-center text-white">
             <span className="mb-4 inline-block rounded-full bg-sw-green-500 px-3 py-1 text-meta text-sw-midnight-500">
