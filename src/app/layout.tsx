@@ -37,6 +37,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${nunitoSans.variable}`}>
+      <head>
+        {/* Start of HubSpot Embed Code */}
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js.hs-scripts.com/506440.js"
+        />
+        {/* End of HubSpot Embed Code */}
+      </head>
       <body className="antialiased">
         <Navbar />
         <main>{children}</main>
