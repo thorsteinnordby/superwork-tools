@@ -11,7 +11,6 @@ const tools = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.43a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L5.25 9.94" />
       </svg>
     ),
-    badge: "Live",
   },
   {
     name: "ROI Calculator",
@@ -23,7 +22,6 @@ const tools = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75V18m15-8.25l-7.714 7.714a2.25 2.25 0 01-3.182 0L2.25 9.75" />
       </svg>
     ),
-    badge: "Live",
   },
   {
     name: "Sales Maturity Assessment",
@@ -74,15 +72,11 @@ export default function HomePage() {
                 <h2 className="font-heading text-body-base font-bold text-sw-neutral-500">
                   {tool.name}
                 </h2>
-                <span
-                  className={`rounded-full px-2 py-0.5 text-meta ${
-                    tool.badge === "Live"
-                      ? "bg-sw-green-500/15 text-sw-green-900"
-                      : "bg-sw-midnight-100 text-sw-neutral-400"
-                  }`}
-                >
-                  {tool.badge}
-                </span>
+                {tool.badge && (
+                  <span className="rounded-full bg-sw-midnight-100 px-2 py-0.5 text-meta text-sw-neutral-400">
+                    {tool.badge}
+                  </span>
+                )}
               </div>
               <p className="text-body-compact text-sw-neutral-400">{tool.description}</p>
             </div>
