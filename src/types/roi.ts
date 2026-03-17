@@ -57,8 +57,8 @@ export interface RoiResults {
 // Industry benchmarks from HubSpot research
 export const ROI_BENCHMARKS = {
   LEAD_VOLUME_INCREASE: 2.05, // +205%
-  DEAL_CLOSE_RATE_INCREASE: 3.11, // +311%
-  DEALS_CLOSED_INCREASE: 1.25, // +125%
+  DEAL_CLOSE_RATE_INCREASE: 0.30, // +30% (more realistic improvement)
+  DEALS_CLOSED_INCREASE: 0.50, // +50% (based on HubSpot data)
   SALES_REP_HOURS_SAVED_PER_WEEK: 5,
   WORKING_HOURS_PER_YEAR: 2080,
   AMORTIZATION_PERIOD_YEARS: 3,

@@ -360,7 +360,7 @@ export default function RoiCalculatorPage() {
                   </span>
                 </div>
                 <div className="flex justify-between border-b border-sw-midnight-100 pb-2">
-                  <span className="text-sm text-sw-neutral-400">Close Rate Improvement (+311%)</span>
+                  <span className="text-sm text-sw-neutral-400">Close Rate Improvement (+30%)</span>
                   <span className="font-semibold text-sw-neutral-500">
                     {formatPercentage(inputs.currentDealCloseRate, 1)} → {formatPercentage(results.newDealCloseRate, 1)}
                   </span>
@@ -456,7 +456,8 @@ export default function RoiCalculatorPage() {
                 <p className="mb-2 text-sm text-sw-neutral-400">Based on HubSpot customer data (2023-2025):</p>
                 <ul className="list-inside list-disc space-y-1 text-sm text-sw-neutral-400">
                   <li><strong>Lead Increase:</strong> +205% more marketing leads</li>
-                  <li><strong>Close Rate Increase:</strong> +311% improvement in deal close rate</li>
+                  <li><strong>Close Rate Improvement:</strong> +30% improvement in deal close rate</li>
+                  <li><strong>Deals Closed:</strong> +50% more deals closed (combined effect of more leads + better conversion)</li>
                   <li><strong>Productivity Gains:</strong> 5 hours saved per sales rep per week</li>
                 </ul>
               </div>
