@@ -64,7 +64,7 @@ export default function HomePage() {
                 : "border-sw-midnight-200 hover:-translate-y-0.5 hover:border-sw-violet-500 hover:shadow-[0_8px_24px_rgba(28,30,49,0.12)]"
             }`}
           >
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sw-violet-500/8 text-sw-violet-500">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-sw-green-500/20 to-sw-green-500/10 text-sw-midnight-500">
               {tool.icon}
             </div>
             <div className="min-w-0 flex-1">
