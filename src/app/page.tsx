@@ -17,13 +17,13 @@ const tools = [
     name: "ROI Calculator",
     description:
       "Estimate savings and revenue lift from switching to HubSpot.",
-    href: "#",
+    href: "/tools/roi-calculator",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75V18m15-8.25l-7.714 7.714a2.25 2.25 0 01-3.182 0L2.25 9.75" />
       </svg>
     ),
-    badge: "Coming Soon",
+    badge: "Live",
   },
   {
     name: "Sales Maturity Assessment",
