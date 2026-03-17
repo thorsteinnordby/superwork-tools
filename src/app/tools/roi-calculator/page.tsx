@@ -209,41 +209,41 @@ export default function RoiCalculatorPage() {
                 label="Monthly Marketing Leads"
                 value={inputs.monthlyMarketingLeads}
                 onChange={(v) => updateInput("monthlyMarketingLeads", v)}
-                tooltip="Number of leads generated per month"
+                tooltip="The total number of marketing qualified leads (MQLs) your business generates each month. Include leads from all channels: website forms, social media, paid ads, etc."
                 required
               />
               <CurrencyInput
                 label="Average Deal Size"
                 value={inputs.averageDealSize}
                 onChange={(v) => updateInput("averageDealSize", v)}
-                tooltip="Average revenue per closed deal"
+                tooltip="The average revenue amount per closed deal. Calculate this by dividing your total revenue by the number of closed deals over the past 12 months."
                 required
               />
               <PercentageInput
                 label="Current Deal Close Rate"
                 value={inputs.currentDealCloseRate}
                 onChange={(v) => updateInput("currentDealCloseRate", v)}
-                tooltip="Percentage of leads that convert to deals"
+                tooltip="The percentage of leads that convert to closed deals. Calculate: (Number of closed deals ÷ Total leads) × 100. Industry average is 10-15%."
                 required
               />
               <NumberInput
                 label="Average Sales Cycle Length (days)"
                 value={inputs.averageSalesCycleLength}
                 onChange={(v) => updateInput("averageSalesCycleLength", v)}
-                tooltip="Time from lead to closed deal"
+                tooltip="The average number of days from first contact with a lead to closing the deal. This helps estimate the velocity of your sales process."
               />
               <NumberInput
                 label="Number of Sales Representatives"
                 value={inputs.numberOfSalesReps}
                 onChange={(v) => updateInput("numberOfSalesReps", v)}
-                tooltip="Total sales team size"
+                tooltip="Total number of sales team members. Include BDRs, SDRs, and Account Executives. This impacts productivity savings calculations."
                 required
               />
               <CurrencyInput
                 label="Average Sales Rep Salary (Annual)"
                 value={inputs.averageSalesRepSalary}
                 onChange={(v) => updateInput("averageSalesRepSalary", v)}
-                tooltip="Annual salary per sales rep"
+                tooltip="The average annual salary (base + commission) per sales representative. Used to calculate the value of time saved through automation."
                 required
               />
             </div>
@@ -255,31 +255,31 @@ export default function RoiCalculatorPage() {
                 label="Marketing Software"
                 value={inputs.marketingSoftwareSpend}
                 onChange={(v) => updateInput("marketingSoftwareSpend", v)}
-                tooltip="Email, analytics, SEO tools, etc."
+                tooltip="Annual cost of all marketing tools: email marketing platforms (Mailchimp, Constant Contact), analytics tools (Google Analytics 360), SEO tools (SEMrush, Ahrefs), social media management, advertising platforms, and landing page builders."
               />
               <CurrencyInput
                 label="Sales Software"
                 value={inputs.salesSoftwareSpend}
                 onChange={(v) => updateInput("salesSoftwareSpend", v)}
-                tooltip="CRM, sales engagement, forecasting tools"
+                tooltip="Annual cost of sales technology: CRM systems (Salesforce, Pipedrive), sales engagement tools (Outreach, SalesLoft), call recording software, forecasting tools, proposal software, and sales intelligence platforms."
               />
               <CurrencyInput
                 label="Service/Support Software"
                 value={inputs.serviceSoftwareSpend}
                 onChange={(v) => updateInput("serviceSoftwareSpend", v)}
-                tooltip="Help desk, live chat, ticketing systems"
+                tooltip="Annual cost of customer service tools: help desk software (Zendesk, Freshdesk), live chat platforms, ticketing systems, knowledge base software, customer feedback tools, and support automation platforms."
               />
               <CurrencyInput
                 label="CMS/Website Software"
                 value={inputs.cmsSoftwareSpend}
                 onChange={(v) => updateInput("cmsSoftwareSpend", v)}
-                tooltip="Website hosting, CMS, plugins"
+                tooltip="Annual cost of website technology: CMS platforms (WordPress premium, Webflow), hosting fees, CDN services, website plugins, form builders, A/B testing tools, and website maintenance subscriptions."
               />
               <CurrencyInput
                 label="Other Software"
                 value={inputs.otherSoftwareSpend}
                 onChange={(v) => updateInput("otherSoftwareSpend", v)}
-                tooltip="Any other relevant software costs"
+                tooltip="Annual cost of any other relevant business software that HubSpot could potentially replace or consolidate, such as workflow automation tools, reporting platforms, or collaboration software."
               />
               <div className="mt-4 border-t border-sw-midnight-200 pt-4">
                 <div className="flex justify-between">
@@ -296,14 +296,14 @@ export default function RoiCalculatorPage() {
                 label="Estimated HubSpot Annual Cost"
                 value={inputs.estimatedHubspotAnnualCost}
                 onChange={(v) => updateInput("estimatedHubspotAnnualCost", v)}
-                tooltip="Projected annual subscription cost"
+                tooltip="The total annual subscription cost for HubSpot (Marketing Hub, Sales Hub, Service Hub, CMS Hub). Get a custom quote from HubSpot or estimate based on your team size and feature needs. Typical ranges: $10K-$50K+ annually."
                 required
               />
               <CurrencyInput
                 label="One-Time Implementation Cost"
                 value={inputs.oneTimeImplementationCost}
                 onChange={(v) => updateInput("oneTimeImplementationCost", v)}
-                tooltip="Initial setup, migration, and training"
+                tooltip="Initial costs for HubSpot setup including: data migration from existing systems, portal configuration, workflow automation setup, integrations, team training, and onboarding services. This cost is amortized over 3 years in ROI calculations."
               />
             </div>
           </div>
