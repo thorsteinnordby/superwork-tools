@@ -405,7 +405,7 @@ export default function RoiCalculatorPage() {
                       borderRadius: "8px",
                       fontSize: "12px",
                     }}
-                    formatter={(value: number) => formatNumber(value, 0)}
+                    formatter={(value) => formatNumber(value as number, 0)}
                   />
                   <Bar dataKey="value" fill="#6a6dcd" radius={[8, 8, 0, 0]} />
                 </BarChart>
@@ -426,7 +426,7 @@ export default function RoiCalculatorPage() {
                       borderRadius: "8px",
                       fontSize: "12px",
                     }}
-                    formatter={(value: number) => formatPercentage(value, 1)}
+                    formatter={(value) => formatPercentage(value as number, 1)}
                   />
                   <Bar dataKey="value" fill="#bfe937" radius={[8, 8, 0, 0]} />
                 </BarChart>
@@ -447,7 +447,7 @@ export default function RoiCalculatorPage() {
                       borderRadius: "8px",
                       fontSize: "12px",
                     }}
-                    formatter={(value: number) => formatCurrency(value)}
+                    formatter={(value) => formatCurrency(value as number)}
                   />
                   <Bar dataKey="value" fill="#6a6dcd" radius={[8, 8, 0, 0]} />
                 </BarChart>
