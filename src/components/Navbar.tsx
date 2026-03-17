@@ -21,12 +21,12 @@ export default function Navbar() {
         >
           Book a demo
         </a>
-        {/* Secondary CTA - Sign In */}
+        {/* Secondary CTA - Schedule a Call */}
         <a
           href="#"
           className="inline-flex items-center gap-1.5 rounded-full border-2 border-white bg-transparent px-6 py-3 font-body text-base font-semibold text-white transition-all hover:bg-white/10"
         >
-          Sign in
+          Schedule a call
         </a>
       </div>
     </nav>
