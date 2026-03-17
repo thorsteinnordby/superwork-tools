@@ -105,9 +105,12 @@ function InputField({
   placeholder: string;
   presets?: string[];
 }) {
+  // Generate a stable ID for the input based on param or label
+  const inputId = param || label.toLowerCase().replace(/\s+/g, '-');
+
   return (
     <div className="mb-6">
-      <label className="mb-1.5 flex items-center gap-2 text-label text-sw-neutral-500">
+      <label htmlFor={inputId} className="mb-1.5 flex items-center gap-2 text-label text-sw-neutral-500">
         {param && (
           <span className="rounded bg-sw-violet-500/8 px-2 py-0.5 font-mono text-meta text-sw-violet-500">
             {param}
@@ -126,10 +129,13 @@ function InputField({
       </label>
       <p className="mb-2 text-meta text-sw-neutral-400">{placeholder}</p>
       <input
+        id={inputId}
+        name={inputId}
         type={param ? "text" : "url"}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
+        autoComplete="off"
         className="w-full rounded-lg border border-sw-midnight-200 bg-white px-3.5 py-2.5 text-sm text-sw-neutral-500 transition-all placeholder:text-sw-neutral-400 focus:border-sw-violet-500 focus:shadow-[0_0_0_3px_rgba(106,109,205,0.12)] focus:outline-none"
       />
       {presets && <PresetChips presets={presets} value={value} onChange={onChange} />}
